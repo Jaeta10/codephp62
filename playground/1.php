@@ -23,14 +23,18 @@ $mysqli_statement = $myconn->query($statement);
             <td>รหัส</td>
             <td>ชื้อผู้ใช้</td>
             <td>สถานะ</td>
+            <td>แก้ไข</td>
+            <td>ลบ</td>
         </tr>
         <?php
-        while ($row = $mysqli_statement->fetch_array()) {
+        while($row=$mysqli_statement->fetch_array()) {
         ?>
         <tr>
             <td><?php echo $row["id"]?></td>
             <td><?php echo $row["username"]?></td>
             <td><?php echo $row["status"]?></td>
+            <td>edit</td>
+            <td>delete</td>
         </tr>
         <?php
         }
